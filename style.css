@@ -1,7 +1,7 @@
 nav {
   height: 60px;
 }
-body {
+#pageBody {
   margin-top: 60px;
 }
 input[type="text"]:focus {

@@ -19,7 +19,7 @@ input.addEventListener("keyup", function(event) {
       parent.removeChild(parent.firstChild);
     }
     parent.setAttribute("style", "display: none");
-    document.getElementById("alpha").setAttribute("style", "display: none");
+    document.getElementById("extraSpace").setAttribute("style", "display: none");
     parent = document.getElementById("video");
     while (parent.hasChildNodes()) {
       parent.removeChild(parent.firstChild);
@@ -52,7 +52,7 @@ function search() {
     oReq.addEventListener("load", reqListener4);
     oReq.open(
       "GET",
-      `https://api.edamam.com/search?q=${recipeQuery}&app_id=07ebeb3d&app_key=YOUR-API-KEY`
+      `https://api.edamam.com/search?q=${recipeQuery}&app_id=YOUR-APP-ID&app_key=YOUR-API-KEY`
     );
     oReq.send();
     let utubeQuery = "how+to+cook+" + recipeQuery;
@@ -133,7 +133,7 @@ function reqListener2() {
   oReq1.addEventListener("load", reqListener3);
   oReq1.open(
     "GET",
-    `https://api.stackexchange.com/2.2/questionTitles/${qIds}?order=desc&sort=votes&site=stackoverflow&filter=!-y(KwOdKR5Ga7mmruVArx2SJykc-M)3jKiDQBk1fq`
+    `https://api.stackexchange.com/2.2/questions/${qIds}?order=desc&sort=votes&site=stackoverflow&filter=!-y(KwOdKR5Ga7mmruVArx2SJykc-M)3jKiDQBk1fq`
   );
   oReq1.send();
 }
@@ -208,9 +208,9 @@ function reqListener4() {
     head.innerHTML = obj.hits[i].recipe.label;
     head.setAttribute("class", "quesTitle");
     let j;
-    for (j in obj.hits[i].recipe.ingredientDiv) {
+    for (j in obj.hits[i].recipe.ingredients) {
       var li = document.createElement("li");
-      li.innerHTML = obj.hits[i].recipe.ingredientDiv[j].text;
+      li.innerHTML = obj.hits[i].recipe.ingredients.text;
       ul.appendChild(li);
     }
     var combinedDiv = document.createElement("div");
