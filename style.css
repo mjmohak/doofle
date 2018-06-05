@@ -7,27 +7,11 @@ body {
 input[type="text"]:focus {
   width: 50%;
 }
-.toview.link {
-  color: blue;
-}
-
-.toview.hover {
-  color: red;
-}
-
-.toview.active {
-  color: green;
-}
-
-.toview.visited {
-  color: pink;
-}
 .search-bar[type="text"] {
   position: absolute;
   z-index: 15;
   left: 10%;
   width: 200px;
-  /* box-sizing: ; */
   border: 5px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
@@ -60,7 +44,7 @@ input[type="text"]:focus {
   background: white;
   overflow-y: scroll;
 }
-#alpha {
+#extraSpace {
   width: 100%;
   height: 1050px;
 }
@@ -68,8 +52,6 @@ input[type="text"]:focus {
   width: 310px;
 }
 .quesTitle {
-  /*color: white;
-  background-color: black;*/
   font-size: 24px;
 }
 .ansBody {
@@ -96,7 +78,7 @@ input[type="text"]:focus {
   width: 200px;
   height: 200px;
 }
-.carouselExampleSlidesOnly {
+#carousel-outer {
   position: relative;
 }
 .text-block {
@@ -108,12 +90,12 @@ input[type="text"]:focus {
   padding-left: 20px;
   padding-right: 20px;
 }
-#goo {
+#google {
   font-size: 65px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
-#doo {
+#doofle {
   font-size: 72px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
